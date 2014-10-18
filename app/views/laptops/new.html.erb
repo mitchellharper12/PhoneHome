@@ -1,0 +1,17 @@
+<h1>Add Laptop to Inventory</h1>
+
+<%- if @laptop.errors.any? -%>
+  <div class="errors">
+    <h3>There were errors adding this laptop:</h3>
+    <ul>
+    <% @laptop.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+<%- end -%>
+
+<%= semantic_form_for @laptop do |f| %>
+    <%= f.inputs %>
+    <%= f.actions %>
+<% end %>
