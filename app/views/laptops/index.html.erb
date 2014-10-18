@@ -12,14 +12,7 @@
       </tr>
     </thead>
     <tbody>
-    <%- @laptops.each do |l| -%>
-      <tr>
-        <td><%= h l.label_number %></td>
-        <td><%= h l.department_id %></td>
-        <td><%= h l.classroom_id %></td>
-        <td><%= h l.person_id %></td>
-      </tr>
-    <%- end -%>
+    <%= render @laptops %>
     </tbody>
   </table>
 <%- else -%>
