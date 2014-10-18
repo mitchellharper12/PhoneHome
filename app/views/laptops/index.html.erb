@@ -1,1 +1,28 @@
 <h1>Laptops in Use</h1>
+
+<div id="laptop-index">
+<%- if @laptops.any? -%>
+  <table>
+    <thead>
+      <tr>
+        <td>Label No.</td>
+        <td>Department</td>
+        <td>Current Room</td>
+        <td>Checked Out To:</td>
+      </tr>
+    </thead>
+    <tbody>
+    <%- @laptops.each do |l| -%>
+      <tr>
+        <td><%= h l.label_number %></td>
+        <td><%= h l.department_id %></td>
+        <td><%= h l.classroom_id %></td>
+        <td><%= h l.person_id %></td>
+      </tr>
+    <%- end -%>
+    </tbody>
+  </table>
+<%- else -%>
+  <p>There aren't any laptops in the system. :(</p>
+<% end %>
+</div>
