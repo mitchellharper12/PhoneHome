@@ -1,3 +1,6 @@
 class Laptop < ActiveRecord::Base
-  # attr_accessible :title, :body
+  belongs_to :person
+  belongs_to :classroom
+  belongs_to :department 
+  has_many :accessories
 end

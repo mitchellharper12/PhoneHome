@@ -1,3 +1,6 @@
 class Accessory < ActiveRecord::Base
-  # attr_accessible :title, :body
+  belongs_to :printer
+  belongs_to :department
+  belongs_to :laptop
+  belongs_to :person
 end

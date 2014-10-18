@@ -1,3 +1,5 @@
 class Classroom < ActiveRecord::Base
-  # attr_accessible :title, :body
+  has_many :laptops
+  has_many :people
+  has_many :printers
 end
