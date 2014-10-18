@@ -14,5 +14,8 @@
 /log/*.log
 /tmp
 
+# Ignore installed gems
+/vendor/bundle
+
 # Ignore text editor temp files
 *~
