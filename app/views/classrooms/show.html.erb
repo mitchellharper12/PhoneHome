@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Room lead:</b>
+  <%= @classroom.room_lead_id %>
+</p>
+
+<p>
+  <b>Number:</b>
+  <%= @classroom.number %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%= @classroom.name %>
+</p>
+
+
+<%= link_to 'Edit', edit_classroom_path(@classroom) %> |
+<%= link_to 'Back', classrooms_path %>

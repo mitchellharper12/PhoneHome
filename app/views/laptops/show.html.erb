@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Department:</b>
+  <%= @laptop.department_id %>
+</p>
+
+<p>
+  <b>Classroom:</b>
+  <%= @laptop.classroom_id %>
+</p>
+
+<p>
+  <b>Person:</b>
+  <%= @laptop.person_id %>
+</p>
+
+<p>
+  <b>Label number:</b>
+  <%= @laptop.label_number %>
+</p>
+
+
+<%= link_to 'Edit', edit_laptop_path(@laptop) %> |
+<%= link_to 'Back', laptops_path %>

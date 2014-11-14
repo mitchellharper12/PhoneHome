@@ -1,21 +1,29 @@
-<h1>Laptops in Use</h1>
+<h1>Listing laptops</h1>
 
-<div id="laptop-index">
-<%- if @laptops.any? -%>
-  <table>
-    <thead>
-      <tr>
-        <td>Label No.</td>
-        <td>Department</td>
-        <td>Current Room</td>
-        <td>Checked Out To:</td>
-      </tr>
-    </thead>
-    <tbody>
-    <%= render @laptops %>
-    </tbody>
-  </table>
-<%- else -%>
-  <p>There aren't any laptops in the system. :(</p>
+<table>
+  <tr>
+    <th>Department</th>
+    <th>Classroom</th>
+    <th>Person</th>
+    <th>Label number</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @laptops.each do |laptop| %>
+  <tr>
+    <td><%= laptop.department_id %></td>
+    <td><%= laptop.classroom_id %></td>
+    <td><%= laptop.person_id %></td>
+    <td><%= laptop.label_number %></td>
+    <td><%= link_to 'Show', laptop %></td>
+    <td><%= link_to 'Edit', edit_laptop_path(laptop) %></td>
+    <td><%= link_to 'Destroy', laptop, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
 <% end %>
-</div>
+</table>
+
+<br />
+
+<%= link_to 'New Laptop', new_laptop_path %>

@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Laptop:</b>
+  <%= @accessory.laptop_id %>
+</p>
+
+<p>
+  <b>Printer:</b>
+  <%= @accessory.printer_id %>
+</p>
+
+<p>
+  <b>Department:</b>
+  <%= @accessory.department_id %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @accessory.description %>
+</p>
+
+<p>
+  <b>Person:</b>
+  <%= @accessory.person_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_accessory_path(@accessory) %> |
+<%= link_to 'Back', accessories_path %>
