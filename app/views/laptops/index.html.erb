@@ -13,7 +13,7 @@
 
 <% @laptops.each do |laptop| %>
   <tr>
-    <td><%= laptop.department.title %></td>
+    <td><%= laptop.department.try(:title) %></td>
     <td><%= laptop.classroom.try(:number) %></td>
     <td><%= laptop.person_id %></td>
     <td><%= laptop.label_number %></td>

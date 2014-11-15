@@ -18,3 +18,37 @@
 
 <%= link_to 'Edit', edit_classroom_path(@classroom) %> |
 <%= link_to 'Back', classrooms_path %>
+
+<%- if @classroom.laptops.any? -%>
+  <h3>Laptops:</h3>
+  <table>
+    <tr>
+    <th>Department</th>
+    <th>Classroom</th>
+    <th>Person</th>
+    <th>Label number</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+  <%= render :partial => "laptops/laptop", colleciton: @classroom.laptops %>
+  </table>
+<%- else -%>
+  <h3>No laptops assigned</h3>
+<%- end -%>
+
+<%- if @classroom.printers.any? -%>
+  <h3>Printers:</h3>
+  <table>
+  <tr>
+    <th>Classroom</th>
+    <th>Department</th>
+    <th>Model</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+  <%= render partial: "printers/printer", collection: @classroom.printers %>
+<%- else -%>
+  <h3>No printers assigned</h3>
+<%- end -%>
