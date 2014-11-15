@@ -13,8 +13,8 @@
 
 <% @laptops.each do |laptop| %>
   <tr>
-    <td><%= laptop.department_id %></td>
-    <td><%= laptop.classroom_id %></td>
+    <td><%= laptop.department.title %></td>
+    <td><%= laptop.classroom.try(:number) %></td>
     <td><%= laptop.person_id %></td>
     <td><%= laptop.label_number %></td>
     <td><%= link_to 'Show', laptop %></td>

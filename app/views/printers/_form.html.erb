@@ -1,10 +1,10 @@
-<%= form_for(@priner) do |f| %>
-  <% if @priner.errors.any? %>
+<%= semantic_form_for(@printer) do |f| %>
+  <% if @printer.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@priner.errors.count, "error") %> prohibited this priner from being saved:</h2>
+      <h2><%= pluralize(@printer.errors.count, "error") %> prohibited this printer from being saved:</h2>
 
       <ul>
-      <% @priner.errors.full_messages.each do |msg| %>
+      <% @printer.errors.full_messages.each do |msg| %>
         <li><%= msg %></li>
       <% end %>
       </ul>
@@ -12,12 +12,12 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :classroom_id %><br />
-    <%= f.number_field :classroom_id %>
+    <%= f.label :classroom %><br />
+    <%= f.input :classroom %>
   </div>
   <div class="field">
     <%= f.label :department_id %><br />
-    <%= f.number_field :department_id %>
+    <%= f.input :department %>
   </div>
   <div class="field">
     <%= f.label :model %><br />
