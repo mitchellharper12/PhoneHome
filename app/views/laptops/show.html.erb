@@ -12,7 +12,7 @@
 
 <p>
   <b>Person:</b>
-  <%= @laptop.person_id %>
+  <%= @laptop.try(:person).try(:fullname) %>
 </p>
 
 <p>

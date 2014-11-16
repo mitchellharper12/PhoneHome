@@ -15,7 +15,7 @@
   <tr>
     <td><%= laptop.department.try(:title) %></td>
     <td><%= laptop.classroom.try(:number) %></td>
-    <td><%= laptop.person_id %></td>
+    <td><%= laptop.person.try(:fullname) %></td>
     <td><%= laptop.label_number %></td>
     <td><%= link_to 'Show', laptop %></td>
     <td><%= link_to 'Edit', edit_laptop_path(laptop) %></td>
